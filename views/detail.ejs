@@ -1,0 +1,13 @@
+<%- include("./partialls/header.ejs") %>
+<div class="container mt-3">
+    <% data.map( item => { %>
+        <div class="content mt-2">
+            <p class="title"><a href="/video/<%- item._id %>"><%- item.title %></a></p>
+            <div>
+                <a href="/video/<%- item._id %>"><img class="photo" src="<%- item.image_url %>" alt=""></a>
+            </div>
+        </div>
+    <%  }) %>
+</div>
+
+<%- include("./partialls/footer.ejs") %>
